@@ -1,4 +1,4 @@
-import q00, q01, q02, q03, q04, q05, q06, q07
+import q00, q01, q02, q03, q04, q05, q06, q07, q08
 
 
 def test_q00():
@@ -60,3 +60,8 @@ def test_06():
 
 def test_07():
     assert q07.solve("12", "気温", "22.4") == "12時の気温は22.4"
+
+
+def test_08():
+    s = "ABCDEFGabcdefgあ"
+    assert q08.cipher(q08.cipher(s)) == s

@@ -1,4 +1,4 @@
-import q00, q01, q02, q03, q04, q05, q06
+import q00, q01, q02, q03, q04, q05, q06, q07
 
 
 def test_q00():
@@ -56,3 +56,7 @@ def test_06():
     assert ret["union"] == {"pa", "se", "ar", "ag", "ad", "ap", "ph", "ra", "di", "is", "gr"}
     assert ret["intersection"] == {"ar", "pa", "ra", "ap"}
     assert ret["diff"] == {"di", "is", "ad", "se"}
+
+
+def test_07():
+    assert q07.solve("12", "気温", "22.4") == "12時の気温は22.4"

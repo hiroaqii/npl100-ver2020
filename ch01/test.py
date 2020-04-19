@@ -1,4 +1,4 @@
-import q00, q01, q02, q03, q04, q05, q06, q07, q08
+import q00, q01, q02, q03, q04, q05, q06, q07, q08, q09
 
 
 def test_q00():
@@ -65,3 +65,14 @@ def test_07():
 def test_08():
     s = "ABCDEFGabcdefgあ"
     assert q08.cipher(q08.cipher(s)) == s
+
+
+def test_09():
+    s = "I couldn’t believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
+    ret1 = q09.solve(s)
+    ret2 = q09.solve(s)
+    lst1 = ret1.split()
+    lst2 = ret2.split()
+    assert ret1 != ret2
+    assert "couldn’t" != lst1[1] != lst2[1]  # 一緒になることもありえる
+    assert "that" == lst1[3] == lst2[3]
